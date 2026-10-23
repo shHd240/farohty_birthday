@@ -1,0 +1,39 @@
+:root{--bg:#80596e;--bg-deep:#462733;--paper:#ecdaba;--lace:#dccaac;--gold:#e8d5b5;--btn:#4a2b3a;--seal:#9b2335;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--gold);font-family:"Cormorant Garamond",Georgia,serif;text-align:center;overflow-x:hidden}
+.flowers{position:fixed;top:0;bottom:0;width:26px;z-index:5;pointer-events:none;background:radial-gradient(circle at 50% 12px,#b9a3d9 0 5px,transparent 6px) 0 0/26px 34px,radial-gradient(circle at 30% 26px,#6f5a9e 0 4px,transparent 5px) 0 0/26px 34px,radial-gradient(circle at 70% 20px,#8a9a6a 0 3px,transparent 4px) 0 0/26px 34px}
+.flowers.l{left:0}.flowers.r{right:0}
+#intro{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:opacity .8s}
+#intro.gone{opacity:0;pointer-events:none;position:absolute;inset:0}
+.open{font-family:Caveat,cursive;font-size:30px;align-self:flex-start;margin-left:18%}
+.env{position:relative;width:260px;height:180px;background:linear-gradient(135deg,#e2bfb8,#c99d99);border-radius:6px;box-shadow:0 18px 30px rgba(0,0,0,.35);transform:rotate(-8deg);transition:transform .5s}
+.env:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom right,transparent 49%,rgba(255,255,255,.18) 50%) 0 0/100% 60% no-repeat,linear-gradient(to bottom left,transparent 49%,rgba(255,255,255,.18) 50%) 0 0/100% 60% no-repeat;border-radius:6px}
+.seal{position:absolute;left:50%;top:48%;width:52px;height:52px;margin:-26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#c4455a,var(--seal) 60%,#6e1424);box-shadow:0 3px 6px rgba(0,0,0,.4)}
+#intro:hover .env{transform:rotate(-4deg) scale(1.04)}
+#card{display:none}#card.show{display:block;animation:rise 1s ease}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+section{min-height:100vh;padding:56px 42px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.to{font-size:13px;letter-spacing:.22em}
+.name{font-family:"Pinyon Script",cursive;font-size:84px;line-height:1;color:var(--gold);margin:0}
+.hb{font-size:13px;letter-spacing:.3em}
+.pack{position:relative;width:280px;height:250px;margin-top:36px}
+.pack .pol{position:absolute;top:-34px;width:128px;background:#fff;padding:6px 6px 22px;box-shadow:0 6px 14px rgba(0,0,0,.4)}
+.pol img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.p1{right:14px;transform:rotate(7deg);top:-16px!important}.p2{left:14px;transform:rotate(-8deg)}
+.pack .flap{position:absolute;left:0;right:0;bottom:0;height:100px;background:linear-gradient(#ecdaba,#e2cba5);border-radius:4px 4px 8px 8px;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+button{font-family:inherit;background:var(--btn);color:var(--gold);border:0;border-radius:999px;padding:14px 46px;font-size:14px;letter-spacing:.25em;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.letter{width:min(100%,330px);background:var(--paper);color:#2b2220;padding:44px 26px;border:14px solid var(--lace);border-radius:18px;box-shadow:0 0 0 4px var(--lace),0 10px 24px rgba(0,0,0,.35)}
+.letter h2{font-size:20px;margin:0 0 14px}.letter p{font-size:15px;line-height:1.65;margin:0}
+.vwrap{width:min(100%,300px);background:#1c1018;padding:8px;border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.vwrap video{display:block;width:100%;height:auto;max-height:74vh;object-fit:contain;border-radius:12px;background:#000}
+.letter.ar{font-family:Amiri,"Noto Naskh Arabic",serif}
+.letter.ar h2{text-align:center;font-family:"Cormorant Garamond",Georgia,serif}
+.letter.ar p{font-size:17px;line-height:1.95;margin:0 0 14px;text-align:right}
+.ph{font-weight:400;font-size:30px;letter-spacing:.14em;line-height:1.3;margin:0}
+.pics{width:min(100%,330px);display:flex;flex-direction:column;gap:30px;padding:10px 0}
+.pol2{background:#fff;padding:7px 7px 26px;width:64%;box-shadow:0 8px 18px rgba(0,0,0,.4)}
+.pol2 img{display:block;width:100%;height:auto}
+.pol2:nth-child(odd){align-self:flex-start;transform:rotate(-5deg)}
+.pol2:nth-child(even){align-self:flex-end;transform:rotate(6deg)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
